@@ -7,9 +7,11 @@
 //
 
 #import "ManageTableViewController.h"
+#import "FriendManager.h"
 
 @interface ManageTableViewController ()
 
+@property (strong, nonatomic) NSArray *friends;
 @end
 
 @implementation ManageTableViewController
@@ -22,6 +24,8 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriends:)];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +33,41 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)addFriends:(id)sender {
+    CNContactPickerViewController *cpvc = [CNContactPickerViewController new];
+    cpvc.delegate = self;
+    [self presentViewController:cpvc animated:YES completion:nil];
+}
+
+- (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray<CNContact *> *)contacts {
+    [[FriendManager defaultFriendManager] addFriendsFromContacts:contacts];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 4;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (section < 3) {
+        return 1;
+    }
+    else return self.friends.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = nil;
+    if ([indexPath indexAtPosition:0] == 3) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
+        cell.textLabel.text = self.friends[[indexPath indexAtPosition:1]];
+    }
     
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

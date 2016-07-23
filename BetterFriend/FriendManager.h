@@ -12,12 +12,16 @@
 
 @interface FriendManager : NSObject
 
--(NSArray<Friend *>*)friends;
++ (__kindof FriendManager *)defaultFriendManager;
 
--(Friend *)addFriendWithContact:(CNContact *)contact;
+@property (nonatomic, strong, readonly) NSArray<Friend *> *friends;
 
--(void)removeFriend:(Friend *)fri;
+- (Friend *)addFriendWithContact:(CNContact *)contact;
 
--(void)save;
+- (void)addFriendsFromContacts:(NSArray<CNContact *> *)contacts;
+
+- (void)removeFriend:(Friend *)fri;
+
+- (void)save;
 
 @end

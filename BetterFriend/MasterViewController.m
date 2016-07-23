@@ -9,7 +9,6 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import <Contacts/Contacts.h>
 
 @interface MasterViewController ()
 

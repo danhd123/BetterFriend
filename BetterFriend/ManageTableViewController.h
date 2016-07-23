@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ContactsUI/ContactsUI.h>
 
-@interface ManageTableViewController : UITableViewController
+@interface ManageTableViewController : UITableViewController <CNContactPickerDelegate>
 
 @end
