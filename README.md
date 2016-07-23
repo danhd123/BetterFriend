@@ -4,7 +4,7 @@
 
 Helping you keep in touch with your ~~pesky~~ valued friends since July 24th, 2016. 
 
-** iOS Dev Camp 2016 **
+** OS Dev Camp 2016**
 
 ## Table of Contents
 
