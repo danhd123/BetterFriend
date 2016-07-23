@@ -1,0 +1,527 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC9A22921D43E7FE0038C7BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22911D43E7FE0038C7BC /* main.m */; };
+		BC9A22951D43E7FE0038C7BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22941D43E7FE0038C7BC /* AppDelegate.m */; };
+		BC9A22981D43E7FE0038C7BC /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22971D43E7FE0038C7BC /* MasterViewController.m */; };
+		BC9A229B1D43E7FE0038C7BC /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A229A1D43E7FE0038C7BC /* DetailViewController.m */; };
+		BC9A229E1D43E7FE0038C7BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9A229C1D43E7FE0038C7BC /* Main.storyboard */; };
+		BC9A22A01D43E7FE0038C7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9A229F1D43E7FE0038C7BC /* Assets.xcassets */; };
+		BC9A22A31D43E7FE0038C7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9A22A11D43E7FE0038C7BC /* LaunchScreen.storyboard */; };
+		BC9A22AE1D43E7FE0038C7BC /* BetterFriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22AD1D43E7FE0038C7BC /* BetterFriendTests.m */; };
+		BC9A22B91D43E7FE0038C7BC /* BetterFriendUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22B81D43E7FE0038C7BC /* BetterFriendUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC9A22AA1D43E7FE0038C7BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9A22851D43E7FE0038C7BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9A228C1D43E7FE0038C7BC;
+			remoteInfo = BetterFriend;
+		};
+		BC9A22B51D43E7FE0038C7BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC9A22851D43E7FE0038C7BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC9A228C1D43E7FE0038C7BC;
+			remoteInfo = BetterFriend;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BC9A228D1D43E7FE0038C7BC /* BetterFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9A22911D43E7FE0038C7BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BC9A22931D43E7FE0038C7BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BC9A22941D43E7FE0038C7BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BC9A22961D43E7FE0038C7BC /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		BC9A22971D43E7FE0038C7BC /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		BC9A22991D43E7FE0038C7BC /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		BC9A229A1D43E7FE0038C7BC /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		BC9A229D1D43E7FE0038C7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC9A229F1D43E7FE0038C7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC9A22A21D43E7FE0038C7BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC9A22A41D43E7FE0038C7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9A22A91D43E7FE0038C7BC /* BetterFriendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFriendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9A22AD1D43E7FE0038C7BC /* BetterFriendTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterFriendTests.m; sourceTree = "<group>"; };
+		BC9A22AF1D43E7FE0038C7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9A22B41D43E7FE0038C7BC /* BetterFriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC9A22B81D43E7FE0038C7BC /* BetterFriendUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterFriendUITests.m; sourceTree = "<group>"; };
+		BC9A22BA1D43E7FE0038C7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC9A228A1D43E7FE0038C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22A61D43E7FE0038C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22B11D43E7FE0038C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BC9A22841D43E7FE0038C7BC = {
+			isa = PBXGroup;
+			children = (
+				BC9A228F1D43E7FE0038C7BC /* BetterFriend */,
+				BC9A22AC1D43E7FE0038C7BC /* BetterFriendTests */,
+				BC9A22B71D43E7FE0038C7BC /* BetterFriendUITests */,
+				BC9A228E1D43E7FE0038C7BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BC9A228E1D43E7FE0038C7BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A228D1D43E7FE0038C7BC /* BetterFriend.app */,
+				BC9A22A91D43E7FE0038C7BC /* BetterFriendTests.xctest */,
+				BC9A22B41D43E7FE0038C7BC /* BetterFriendUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC9A228F1D43E7FE0038C7BC /* BetterFriend */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A22931D43E7FE0038C7BC /* AppDelegate.h */,
+				BC9A22941D43E7FE0038C7BC /* AppDelegate.m */,
+				BC9A22961D43E7FE0038C7BC /* MasterViewController.h */,
+				BC9A22971D43E7FE0038C7BC /* MasterViewController.m */,
+				BC9A22991D43E7FE0038C7BC /* DetailViewController.h */,
+				BC9A229A1D43E7FE0038C7BC /* DetailViewController.m */,
+				BC9A229C1D43E7FE0038C7BC /* Main.storyboard */,
+				BC9A229F1D43E7FE0038C7BC /* Assets.xcassets */,
+				BC9A22A11D43E7FE0038C7BC /* LaunchScreen.storyboard */,
+				BC9A22A41D43E7FE0038C7BC /* Info.plist */,
+				BC9A22901D43E7FE0038C7BC /* Supporting Files */,
+			);
+			path = BetterFriend;
+			sourceTree = "<group>";
+		};
+		BC9A22901D43E7FE0038C7BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A22911D43E7FE0038C7BC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BC9A22AC1D43E7FE0038C7BC /* BetterFriendTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A22AD1D43E7FE0038C7BC /* BetterFriendTests.m */,
+				BC9A22AF1D43E7FE0038C7BC /* Info.plist */,
+			);
+			path = BetterFriendTests;
+			sourceTree = "<group>";
+		};
+		BC9A22B71D43E7FE0038C7BC /* BetterFriendUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A22B81D43E7FE0038C7BC /* BetterFriendUITests.m */,
+				BC9A22BA1D43E7FE0038C7BC /* Info.plist */,
+			);
+			path = BetterFriendUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC9A228C1D43E7FE0038C7BC /* BetterFriend */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC9A22BD1D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriend" */;
+			buildPhases = (
+				BC9A22891D43E7FE0038C7BC /* Sources */,
+				BC9A228A1D43E7FE0038C7BC /* Frameworks */,
+				BC9A228B1D43E7FE0038C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterFriend;
+			productName = BetterFriend;
+			productReference = BC9A228D1D43E7FE0038C7BC /* BetterFriend.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC9A22A81D43E7FE0038C7BC /* BetterFriendTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC9A22C01D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriendTests" */;
+			buildPhases = (
+				BC9A22A51D43E7FE0038C7BC /* Sources */,
+				BC9A22A61D43E7FE0038C7BC /* Frameworks */,
+				BC9A22A71D43E7FE0038C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC9A22AB1D43E7FE0038C7BC /* PBXTargetDependency */,
+			);
+			name = BetterFriendTests;
+			productName = BetterFriendTests;
+			productReference = BC9A22A91D43E7FE0038C7BC /* BetterFriendTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC9A22B31D43E7FE0038C7BC /* BetterFriendUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC9A22C31D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriendUITests" */;
+			buildPhases = (
+				BC9A22B01D43E7FE0038C7BC /* Sources */,
+				BC9A22B11D43E7FE0038C7BC /* Frameworks */,
+				BC9A22B21D43E7FE0038C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC9A22B61D43E7FE0038C7BC /* PBXTargetDependency */,
+			);
+			name = BetterFriendUITests;
+			productName = BetterFriendUITests;
+			productReference = BC9A22B41D43E7FE0038C7BC /* BetterFriendUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC9A22851D43E7FE0038C7BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = BetterFriend;
+				TargetAttributes = {
+					BC9A228C1D43E7FE0038C7BC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BC9A22A81D43E7FE0038C7BC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BC9A228C1D43E7FE0038C7BC;
+					};
+					BC9A22B31D43E7FE0038C7BC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BC9A228C1D43E7FE0038C7BC;
+					};
+				};
+			};
+			buildConfigurationList = BC9A22881D43E7FE0038C7BC /* Build configuration list for PBXProject "BetterFriend" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC9A22841D43E7FE0038C7BC;
+			productRefGroup = BC9A228E1D43E7FE0038C7BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC9A228C1D43E7FE0038C7BC /* BetterFriend */,
+				BC9A22A81D43E7FE0038C7BC /* BetterFriendTests */,
+				BC9A22B31D43E7FE0038C7BC /* BetterFriendUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC9A228B1D43E7FE0038C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9A22A31D43E7FE0038C7BC /* LaunchScreen.storyboard in Resources */,
+				BC9A22A01D43E7FE0038C7BC /* Assets.xcassets in Resources */,
+				BC9A229E1D43E7FE0038C7BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22A71D43E7FE0038C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22B21D43E7FE0038C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC9A22891D43E7FE0038C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9A22951D43E7FE0038C7BC /* AppDelegate.m in Sources */,
+				BC9A22981D43E7FE0038C7BC /* MasterViewController.m in Sources */,
+				BC9A22921D43E7FE0038C7BC /* main.m in Sources */,
+				BC9A229B1D43E7FE0038C7BC /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22A51D43E7FE0038C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9A22AE1D43E7FE0038C7BC /* BetterFriendTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC9A22B01D43E7FE0038C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9A22B91D43E7FE0038C7BC /* BetterFriendUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC9A22AB1D43E7FE0038C7BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC9A228C1D43E7FE0038C7BC /* BetterFriend */;
+			targetProxy = BC9A22AA1D43E7FE0038C7BC /* PBXContainerItemProxy */;
+		};
+		BC9A22B61D43E7FE0038C7BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC9A228C1D43E7FE0038C7BC /* BetterFriend */;
+			targetProxy = BC9A22B51D43E7FE0038C7BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC9A229C1D43E7FE0038C7BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC9A229D1D43E7FE0038C7BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC9A22A11D43E7FE0038C7BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC9A22A21D43E7FE0038C7BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC9A22BB1D43E7FE0038C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BC9A22BC1D43E7FE0038C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC9A22BE1D43E7FE0038C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterFriend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC9A22BF1D43E7FE0038C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BetterFriend/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriend;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC9A22C11D43E7FE0038C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BetterFriendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterFriend.app/BetterFriend";
+			};
+			name = Debug;
+		};
+		BC9A22C21D43E7FE0038C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = BetterFriendTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriendTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BetterFriend.app/BetterFriend";
+			};
+			name = Release;
+		};
+		BC9A22C41D43E7FE0038C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BetterFriendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BetterFriend;
+			};
+			name = Debug;
+		};
+		BC9A22C51D43E7FE0038C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = BetterFriendUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriendUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = BetterFriend;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC9A22881D43E7FE0038C7BC /* Build configuration list for PBXProject "BetterFriend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9A22BB1D43E7FE0038C7BC /* Debug */,
+				BC9A22BC1D43E7FE0038C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC9A22BD1D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriend" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9A22BE1D43E7FE0038C7BC /* Debug */,
+				BC9A22BF1D43E7FE0038C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC9A22C01D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriendTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9A22C11D43E7FE0038C7BC /* Debug */,
+				BC9A22C21D43E7FE0038C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BC9A22C31D43E7FE0038C7BC /* Build configuration list for PBXNativeTarget "BetterFriendUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC9A22C41D43E7FE0038C7BC /* Debug */,
+				BC9A22C51D43E7FE0038C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC9A22851D43E7FE0038C7BC /* Project object */;
+}
