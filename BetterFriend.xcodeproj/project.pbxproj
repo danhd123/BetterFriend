@@ -22,6 +22,8 @@
 		BC9A22CE1D43ED7C0038C7BC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */; };
 		BC9A22D11D43F6BA0038C7BC /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22CF1D43F6BA0038C7BC /* Contacts.framework */; };
 		BC9A22D21D43F6BA0038C7BC /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22D01D43F6BA0038C7BC /* ContactsUI.framework */; };
+		BC9A22D41D4409250038C7BC /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = BC9A22D31D4409250038C7BC /* locations.json */; };
+		BC9A22DA1D440BC60038C7BC /* ManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22D91D440BC60038C7BC /* ManageTableViewController.m */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -104,6 +106,9 @@
 		BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		BC9A22CF1D43F6BA0038C7BC /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		BC9A22D01D43F6BA0038C7BC /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
+		BC9A22D31D4409250038C7BC /* locations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = locations.json; sourceTree = SOURCE_ROOT; };
+		BC9A22D81D440BC60038C7BC /* ManageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTableViewController.h; sourceTree = "<group>"; };
+		BC9A22D91D440BC60038C7BC /* ManageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTableViewController.m; sourceTree = "<group>"; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -240,7 +245,10 @@
 				BC9A22A11D43E7FE0038C7BC /* LaunchScreen.storyboard */,
 				BC9A22A41D43E7FE0038C7BC /* Info.plist */,
 				D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */,
+				BC9A22D31D4409250038C7BC /* locations.json */,
 				BC9A22901D43E7FE0038C7BC /* Supporting Files */,
+				BC9A22D81D440BC60038C7BC /* ManageTableViewController.h */,
+				BC9A22D91D440BC60038C7BC /* ManageTableViewController.m */,
 			);
 			path = BetterFriend;
 			sourceTree = "<group>";
@@ -530,6 +538,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9A22D41D4409250038C7BC /* locations.json in Resources */,
 				D9A3B1AC1D43ED8C002E6E09 /* GTMOAuth2ViewTouch.xib in Resources */,
 				D9A3B19D1D43ED8C002E6E09 /* upload-sym in Resources */,
 				D9A3B1AA1D43ED8C002E6E09 /* GINInviteResources.bundle in Resources */,
@@ -569,6 +578,7 @@
 			files = (
 				BC9A22951D43E7FE0038C7BC /* AppDelegate.m in Sources */,
 				BC9A22981D43E7FE0038C7BC /* MasterViewController.m in Sources */,
+				BC9A22DA1D440BC60038C7BC /* ManageTableViewController.m in Sources */,
 				D9A3B1B01D43ED8C002E6E09 /* README.md in Sources */,
 				BC9A22921D43E7FE0038C7BC /* main.m in Sources */,
 				BC9A229B1D43E7FE0038C7BC /* DetailViewController.m in Sources */,

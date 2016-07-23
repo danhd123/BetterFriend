@@ -23,7 +23,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
     UIBarButtonItem *configureButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(configure:)];
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItem target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = configureButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
@@ -42,6 +41,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+- (void)configure:(id)sender {
+    [self performSegueWithIdentifier:@"showManage" sender:sender];
 }
 
 - (void)insertNewObject:(id)sender {
