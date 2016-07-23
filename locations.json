@@ -1,0 +1,1019 @@
+[
+  {
+    "Thing": "Shire of Cloondara",
+    "Type": "Activity",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://cloondara.westkingdom.org/",
+    "Description": "Medieval warfare"
+  },
+  {
+    "Thing": "Golden Gate Conservancy History Tours",
+    "Type": "Activity",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Musee Mecanique",
+    "Type": "Arcade",
+    "SubType": "",
+    "Price": "$",
+    "BetterFriend_Rating": 9,
+    "URL": "https://www.yelp.com/biz/mus%C3%A9e-m%C3%A9canique-san-francisco-4",
+    "Description": "Old school arcade from pre-1960s"
+  },
+  {
+    "Thing": "Urban Putt",
+    "Type": "Arcade",
+    "SubType": "",
+    "Price": "$$",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.urbanputt.com/",
+    "Description": "Indoor crazy mini golf"
+  },
+  {
+    "Thing": "Free Gold Watch",
+    "Type": "Arcade",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.yelp.com/biz/free-gold-watch-san-francisco",
+    "Description": ""
+  },
+  {
+    "Thing": "Soda Popinski",
+    "Type": "Arcade/Bar",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.yelp.com/biz/soda-popinskis-san-francisco",
+    "Description": "Nintendo games & bar"
+  },
+  {
+    "Thing": "Folsom Street Foundry",
+    "Type": "Arcade/Bar",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": 8,
+    "URL": "http://folsomstreetfoundry.com/",
+    "Description": ""
+  },
+  {
+    "Thing": "Clarion Alley",
+    "Type": "Art",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.yelp.com/biz/clarion-alley-san-francisco",
+    "Description": "Street murals"
+  },
+  {
+    "Thing": "Balmy Street",
+    "Type": "Art",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.yelp.com/biz/balmy-street-murals-san-francisco",
+    "Description": "Street murals"
+  },
+  {
+    "Thing": "Paradise Loop",
+    "Type": "Bicycle",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Bike Party",
+    "Type": "Bicycle",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Bike ride around the city, bring beers for each stop"
+  },
+  {
+    "Thing": "City Lights Poetry Room",
+    "Type": "Bookstore",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.theguardian.com/travel/2013/may/25/san-francisco-city-lights-bookshop-beats",
+    "Description": ""
+  },
+  {
+    "Thing": "Asia SF",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://asiasf.com/",
+    "Description": "Transexual entertainment, dinner"
+  },
+  {
+    "Thing": "Murder Mystery Dinner",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.thedinnerdetective.com/san-francisco-oakland/",
+    "Description": ""
+  },
+  {
+    "Thing": "Hoodslam",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.birdswillfall.com/",
+    "Description": "Indie wrestling in Oakland"
+  },
+  {
+    "Thing": "Castro Symphonic Theater Organ",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Escape the Room",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "in Japantown"
+  },
+  {
+    "Thing": "Chantey Sing at Hyde Street Pier",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.nps.gov/safr/learn/historyculture/chantey-sing.htm",
+    "Description": ""
+  },
+  {
+    "Thing": "Blue Angels",
+    "Type": "Entertainment",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://fleetweeksf.org/air-show/",
+    "Description": ""
+  },
+  {
+    "Thing": "Treasure Island Flea Market",
+    "Type": "Event",
+    "SubType": "Market",
+    "Price": "",
+    "BetterFriend_Rating": 6,
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Brewcade",
+    "Type": "Games/Bar",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": 8,
+    "URL": "",
+    "Description": "Has Killer Queen arcade machine"
+  },
+  {
+    "Thing": "Botanical Garden",
+    "Type": "Garden",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Japanese Garden",
+    "Type": "Garden",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/japanese-tea-garden",
+    "Description": ""
+  },
+  {
+    "Thing": "American Bison Enclosure",
+    "Type": "Garden",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/golden-gate-park-bison",
+    "Description": ""
+  },
+  {
+    "Thing": "Board of Supervisors Public Comment",
+    "Type": "Gov't",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.sfbos.org/index.aspx?page=2314",
+    "Description": ""
+  },
+  {
+    "Thing": "Twin Peaks",
+    "Type": "Hike",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Ferry Building",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Sutro Baths",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/ruins-of-the-sutro-baths",
+    "Description": ""
+  },
+  {
+    "Thing": "Fort Mason",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Lyon Street Steps",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Presidio (Yoda Fountain / Lucasfilm)",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/yoda-fountain",
+    "Description": ""
+  },
+  {
+    "Thing": "Palace of Fine Arts",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Concrete slides in Children's Playground (Golden Gate Park)",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Acquatic Park Tombstones",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/aquatic-park-tombstones",
+    "Description": "Tombstones at low tide"
+  },
+  {
+    "Thing": "Shipwrecks at Land's End",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/shipwrecks-lands-end",
+    "Description": "Ship graveyard"
+  },
+  {
+    "Thing": "Center of SF Monument",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/the-center-of-san-francisco-monument",
+    "Description": ""
+  },
+  {
+    "Thing": "Golden Firehydrant",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/the-golden-fire-hydrant",
+    "Description": ""
+  },
+  {
+    "Thing": "The Wave Organ",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/wave-organ",
+    "Description": ""
+  },
+  {
+    "Thing": "Seward Street Slides",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/seward-street-slides",
+    "Description": ""
+  },
+  {
+    "Thing": "Conservatory of Flowers",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/san-francisco-conservatory-flowers",
+    "Description": ""
+  },
+  {
+    "Thing": "Albion Castle",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/albion-castle",
+    "Description": "Hidden tunnels"
+  },
+  {
+    "Thing": "Parrots at Telegraph Hill",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/parrots-telegraph-hill",
+    "Description": "Wild parrots"
+  },
+  {
+    "Thing": "Elephant Seals",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Giants Baseball Game",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": 6,
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Nike Missile Site",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "In the Headlands"
+  },
+  {
+    "Thing": "Karl the Fog",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Watch the fog roll over the hills"
+  },
+  {
+    "Thing": "Legion of Honor",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Vermont Street in Potrero Hill",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Crissy Field",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Esalen Public Night Bathing",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.esalen.org/page/public-night-bathing",
+    "Description": ""
+  },
+  {
+    "Thing": "Prelinger Library",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.sfchronicle.com/art/article/In-SOMA-a-hidden-research-library-reflects-its-6458999.php",
+    "Description": ""
+  },
+  {
+    "Thing": "Berkeley Rose Garden",
+    "Type": "Location",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Bay to Breakers",
+    "Type": "Event",
+    "SubType": "Marathon",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Or watch as a spectator"
+  },
+  {
+    "Thing": "Wells Fargo Museum",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.wellsfargohistory.com/museums/san-francisco/",
+    "Description": ""
+  },
+  {
+    "Thing": "International Art Museum of America",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Cable Car Museum",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "Free",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.cablecarmuseum.org/",
+    "Description": "Museum of old cable cars in SF"
+  },
+  {
+    "Thing": "Bay Model Tide Exhibit",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.spn.usace.army.mil/Missions/Recreation/BayModelVisitorCenter/TheBayModelJourney.aspx",
+    "Description": ""
+  },
+  {
+    "Thing": "Antique Vibrator Museum",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://antiquevibratormuseum.com/",
+    "Description": ""
+  },
+  {
+    "Thing": "SF Museum of Modern Art",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Exploratorium",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.exploratorium.edu/",
+    "Description": "Has an adult night"
+  },
+  {
+    "Thing": "Long Now 10,000 Year Clock",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/long-now-orrery",
+    "Description": ""
+  },
+  {
+    "Thing": "House of Air",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/house-of-air",
+    "Description": ""
+  },
+  {
+    "Thing": "Pinball Museum",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://pacificpinball.org/",
+    "Description": ""
+  },
+  {
+    "Thing": "California Academy of Sciences Herpetology Department",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/california-academy-sciences-herpetology-collection",
+    "Description": "10,000 frogs and lizards preserved in glass"
+  },
+  {
+    "Thing": "Audium Theater of Sound",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.audium.org/",
+    "Description": "Cozy 49-seat theater featuring specially composed \"sound sculptures\" broadcast on 169 speakers"
+  },
+  {
+    "Thing": "Institute of Illegal Images",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/institute-illegal-images",
+    "Description": ""
+  },
+  {
+    "Thing": "Internet Archive",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://archive.org/about/contact.php",
+    "Description": ""
+  },
+  {
+    "Thing": "Museum of Art & Digital Entertainment",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://themade.org/",
+    "Description": ""
+  },
+  {
+    "Thing": "Computer History Museum",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.computerhistory.org/",
+    "Description": ""
+  },
+  {
+    "Thing": "Nightlife @ Academy of Sciences",
+    "Type": "Museum",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Adult-only night"
+  },
+  {
+    "Thing": "Power Exchange",
+    "Type": "Nightlife",
+    "SubType": "",
+    "Price": "$$",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.powerexchange.com/main.html",
+    "Description": "Pansexual nighttime sex club, kink/fetish positive."
+  },
+  {
+    "Thing": "Paxton Gate",
+    "Type": "Shopping",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/paxton-gate",
+    "Description": ""
+  },
+  {
+    "Thing": "Pirate Shop",
+    "Type": "Shopping",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/pirate-shop-826-valencia",
+    "Description": ""
+  },
+  {
+    "Thing": "SF Walking Tours",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.sfcityguides.org/",
+    "Description": "City walking tours for 1-2 hours"
+  },
+  {
+    "Thing": "Alcatraz Night Tour",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "$$$",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.yelp.com/biz/alcatraz-island-night-tour-san-francisco",
+    "Description": "Tour the prison of Alcatraz at night; has some unique tours not available during day"
+  },
+  {
+    "Thing": "Gold Rush City Tour",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.sfcityguides.org/desc.html?tour=37",
+    "Description": ""
+  },
+  {
+    "Thing": "Chris Carlsson City History Tour",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Coit Tower",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Presidio Sculptures",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Privately-Owned Public Open Space and Public Art (POPOS)",
+    "Type": "Tour",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://sf-planning.org/privately-owned-public-open-space-and-public-art-popos",
+    "Description": ""
+  },
+  {
+    "Thing": "Tiled Steps",
+    "Type": "Walk/Hike",
+    "SubType": "",
+    "Price": "Free",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.tiledsteps.org/",
+    "Description": "an awesome combo of stairs, SF art, pristine nature (last dune hill environment in the city), and views of the West half of the city"
+  },
+  {
+    "Thing": "Glen Park Canyon",
+    "Type": "Walk/Hike",
+    "SubType": "",
+    "Price": "Free",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Bike across Golden Gate Bridge",
+    "Type": "Walk/Hike",
+    "SubType": "",
+    "Price": "$",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Muir Woods",
+    "Type": "Walk/Hike",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Mount Sutro Hike",
+    "Type": "Walk/Hike",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://mntsutro.com/hiking/",
+    "Description": ""
+  },
+  {
+    "Thing": "Straw SF",
+    "Type": "Food",
+    "SubType": "American",
+    "Price": "",
+    "BetterFriend_Rating": 6,
+    "URL": "",
+    "Description": "Carnival Food"
+  },
+  {
+    "Thing": "Tartine",
+    "Type": "Food",
+    "SubType": "Bakery",
+    "Price": "$$",
+    "BetterFriend_Rating": 10,
+    "URL": "",
+    "Description": "Buy a loaf of sourdough bread at 4:30pm"
+  },
+  {
+    "Thing": "Old Ship Saloon (and other historical bars)",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.sanfrancisco.travel/article/oldest-bars-san-francisco-neighborhood",
+    "Description": "In a shipwreck"
+  },
+  {
+    "Thing": "Smuggler's Cove",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.smugglerscovesf.com/",
+    "Description": "Times of London Top 50"
+  },
+  {
+    "Thing": "Tonga Room",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Cool, old tiki bar"
+  },
+  {
+    "Thing": "Martuni's",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Martinis at an old school piano bar"
+  },
+  {
+    "Thing": "True Sake",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Sake tastings"
+  },
+  {
+    "Thing": "The Interval",
+    "Type": "Food",
+    "SubType": "Bar",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://theinterval.org/",
+    "Description": "Long Now cafe"
+  },
+  {
+    "Thing": "House of Prime Rib",
+    "Type": "Food",
+    "SubType": "BBQ",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Burma Superstar",
+    "Type": "Food",
+    "SubType": "Burmese",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Oakland Chinatown",
+    "Type": "Food",
+    "SubType": "Chinese",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "San Tung",
+    "Type": "Food",
+    "SubType": "Chinese",
+    "Price": "",
+    "BetterFriend_Rating": 10,
+    "URL": "https://www.yelp.com/biz/san-tung-san-francisco-2",
+    "Description": "Chinese, best chicken wings"
+  },
+  {
+    "Thing": "Green's",
+    "Type": "Food",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "https://www.yelp.com/biz/greens-restaurant-san-francisco-3",
+    "Description": "One of the best vegetarian restaurants, esp. during sunset"
+  },
+  {
+    "Thing": "Crown & Crumpet",
+    "Type": "Food",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.atlasobscura.com/places/crown-crumpet",
+    "Description": "Tea room"
+  },
+  {
+    "Thing": "Gold Mirror",
+    "Type": "Food",
+    "SubType": "",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://goldmirrorrestaurant.com/",
+    "Description": "Home-cooked Italian food"
+  },
+  {
+    "Thing": "Trouble Cafe",
+    "Type": "Food",
+    "SubType": "Coffee",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Get toast and coconut"
+  },
+  {
+    "Thing": "Caff� Macaroni",
+    "Type": "Food",
+    "SubType": "French",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "http://www.caffemacaroni.com/",
+    "Description": ""
+  },
+  {
+    "Thing": "Chez Panisse",
+    "Type": "Food",
+    "SubType": "French",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Farolito",
+    "Type": "Food",
+    "SubType": "Mexican",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "La Taqueria",
+    "Type": "Food",
+    "SubType": "Mexican",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Smitten Ice Cream",
+    "Type": "Food",
+    "SubType": "Ice Cream",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Liquid nitrogen ice cream"
+  },
+  {
+    "Thing": "Bi-Rite Ice Cream",
+    "Type": "Food",
+    "SubType": "Ice Cream",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Ice Cream"
+  },
+  {
+    "Thing": "Tony's Napoletana",
+    "Type": "Food",
+    "SubType": "Pizza",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Pizza"
+  },
+  {
+    "Thing": "Pizza Delfina",
+    "Type": "Food",
+    "SubType": "Pizza",
+    "Price": "",
+    "BetterFriend_Rating": 8,
+    "URL": "",
+    "Description": "Pizza"
+  },
+  {
+    "Thing": "Mensho",
+    "Type": "Food",
+    "SubType": "Ramen",
+    "Price": "$$",
+    "BetterFriend_Rating": 10,
+    "URL": "",
+    "Description": "Ramen"
+  },
+  {
+    "Thing": "Swann's Oyster Depot",
+    "Type": "Food",
+    "SubType": "Seafood",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Center SF Tea House",
+    "Type": "Food",
+    "SubType": "Tea",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": ""
+  },
+  {
+    "Thing": "Lers Ros",
+    "Type": "Food",
+    "SubType": "Thai",
+    "Price": "",
+    "BetterFriend_Rating": "",
+    "URL": "",
+    "Description": "Thai (go to the original one)"
+  }
+]

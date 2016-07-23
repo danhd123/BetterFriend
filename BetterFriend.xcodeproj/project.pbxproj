@@ -16,6 +16,10 @@
 		BC9A22A31D43E7FE0038C7BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC9A22A11D43E7FE0038C7BC /* LaunchScreen.storyboard */; };
 		BC9A22AE1D43E7FE0038C7BC /* BetterFriendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22AD1D43E7FE0038C7BC /* BetterFriendTests.m */; };
 		BC9A22B91D43E7FE0038C7BC /* BetterFriendUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A22B81D43E7FE0038C7BC /* BetterFriendUITests.m */; };
+		BC9A22C91D43EC630038C7BC /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22C61D43EC630038C7BC /* FBSDKCoreKit.framework */; };
+		BC9A22CA1D43EC630038C7BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */; };
+		BC9A22CB1D43EC630038C7BC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22C81D43EC630038C7BC /* FBSDKShareKit.framework */; };
+		BC9A22CE1D43ED7C0038C7BC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -92,6 +96,10 @@
 		BC9A22B41D43E7FE0038C7BC /* BetterFriendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BetterFriendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9A22B81D43E7FE0038C7BC /* BetterFriendUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BetterFriendUITests.m; sourceTree = "<group>"; };
 		BC9A22BA1D43E7FE0038C7BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9A22C61D43EC630038C7BC /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		BC9A22C81D43EC630038C7BC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -166,6 +174,10 @@
 				D9A3B1A81D43ED8C002E6E09 /* GooglePlusUtilities.framework in Frameworks */,
 				D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */,
 				D9A3B1B31D43ED8C002E6E09 /* FirebaseStorage.framework in Frameworks */,
+				BC9A22CA1D43EC630038C7BC /* FBSDKLoginKit.framework in Frameworks */,
+				BC9A22C91D43EC630038C7BC /* FBSDKCoreKit.framework in Frameworks */,
+				BC9A22CB1D43EC630038C7BC /* FBSDKShareKit.framework in Frameworks */,
+				BC9A22CE1D43ED7C0038C7BC /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +201,7 @@
 		BC9A22841D43E7FE0038C7BC = {
 			isa = PBXGroup;
 			children = (
+				BC9A22CC1D43EC6A0038C7BC /* Frameworks */,
 				BC9A228F1D43E7FE0038C7BC /* BetterFriend */,
 				BC9A22AC1D43E7FE0038C7BC /* BetterFriendTests */,
 				BC9A22B71D43E7FE0038C7BC /* BetterFriendUITests */,
@@ -250,6 +263,17 @@
 				BC9A22BA1D43E7FE0038C7BC /* Info.plist */,
 			);
 			path = BetterFriendUITests;
+			sourceTree = "<group>";
+		};
+		BC9A22CC1D43EC6A0038C7BC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */,
+				BC9A22C61D43EC630038C7BC /* FBSDKCoreKit.framework */,
+				BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */,
+				BC9A22C81D43EC630038C7BC /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D9A3B15C1D43ED8C002E6E09 /* Firebase */ = {
@@ -695,6 +719,7 @@
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Messaging",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/RemoteConfig",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Storage",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BetterFriend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -721,6 +746,7 @@
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Messaging",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/RemoteConfig",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Storage",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = BetterFriend/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
