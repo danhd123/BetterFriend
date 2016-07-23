@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#import <Contacts/Contacts.h>
 
 @interface MasterViewController ()
 
@@ -21,14 +22,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+    UIBarButtonItem *configureButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"settings"] style:UIBarButtonItemStylePlain target:self action:@selector(configure:)];
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItem target:self action:@selector(insertNewObject:)];
+    self.navigationItem.rightBarButtonItem = configureButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
     loginButton.center = self.view.center;
     [self.view addSubview:loginButton];
-
+    
+    //get contacts
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {

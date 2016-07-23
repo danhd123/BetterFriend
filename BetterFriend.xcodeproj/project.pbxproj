@@ -20,6 +20,8 @@
 		BC9A22CA1D43EC630038C7BC /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */; };
 		BC9A22CB1D43EC630038C7BC /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22C81D43EC630038C7BC /* FBSDKShareKit.framework */; };
 		BC9A22CE1D43ED7C0038C7BC /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */; };
+		BC9A22D11D43F6BA0038C7BC /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22CF1D43F6BA0038C7BC /* Contacts.framework */; };
+		BC9A22D21D43F6BA0038C7BC /* ContactsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC9A22D01D43F6BA0038C7BC /* ContactsUI.framework */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -100,6 +102,8 @@
 		BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BC9A22C81D43EC630038C7BC /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		BC9A22CF1D43F6BA0038C7BC /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		BC9A22D01D43F6BA0038C7BC /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -147,6 +151,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9A22D11D43F6BA0038C7BC /* Contacts.framework in Frameworks */,
+				BC9A22D21D43F6BA0038C7BC /* ContactsUI.framework in Frameworks */,
 				D9A3B1A01D43ED8C002E6E09 /* FirebaseDatabase.framework in Frameworks */,
 				D9A3B1AE1D43ED8C002E6E09 /* GoogleIPhoneUtilities.framework in Frameworks */,
 				D9A3B1951D43ED8C002E6E09 /* GoogleUtilities.framework in Frameworks */,
@@ -268,6 +274,8 @@
 		BC9A22CC1D43EC6A0038C7BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BC9A22CF1D43F6BA0038C7BC /* Contacts.framework */,
+				BC9A22D01D43F6BA0038C7BC /* ContactsUI.framework */,
 				BC9A22CD1D43ED7C0038C7BC /* Bolts.framework */,
 				BC9A22C61D43EC630038C7BC /* FBSDKCoreKit.framework */,
 				BC9A22C71D43EC630038C7BC /* FBSDKLoginKit.framework */,
