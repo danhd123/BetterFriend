@@ -32,7 +32,7 @@ static double sDefaultContactFrequency = 3.0 * 7.0 * 24.0 * 60.0 * 60.0;
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    self.setupFriend.lastContacted = self.datePicker.date.timeIntervalSinceNow;
+    self.setupFriend.lastContacted = self.datePicker.date.timeIntervalSinceReferenceDate;
     self.setupFriend.contactFrequency = sDefaultContactFrequency;
     self.setupFriend.contactTypePreference = self.contactMethodControl.selectedSegmentIndex;
     [APP_MOC save:nil];

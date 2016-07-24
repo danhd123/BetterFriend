@@ -9,6 +9,7 @@
 #import "LocationsTableViewController.h"
 #import "Location.h"
 #import "AppDelegate.h"
+#import "Like.h"
 
 @interface LocationsTableViewController ()
 @property (nonatomic, strong) NSMutableArray<Location *> *activities;
@@ -35,7 +36,7 @@
     self.food = [[NSMutableArray alloc] init];
     self.locations = [[NSMutableArray alloc] init];
     self.events = [[NSMutableArray alloc] init];
-    BOOL done = ![[NSUserDefaults standardUserDefaults] boolForKey:@"LocationsTableViewControllerAlreadyLoadedSampleLocations"];
+    BOOL done = [[NSUserDefaults standardUserDefaults] boolForKey:@"LocationsTableViewControllerAlreadyLoadedSampleLocations"];
     if (!done) {
         NSData *locationData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"locations" withExtension:@"json"]];
         NSError *jsonConversionError = nil;
@@ -50,6 +51,14 @@
             location.name = dict[@"Thing"];
             location.detail = dict[@"Description"];
             location.locationType = dict[@"Type"];
+            Like *firstLike = [Like insertInManagedObjectContext:APP_MOC];
+            firstLike.name = dict[@"SubType"];
+            NSOrderedSet *os = [NSOrderedSet orderedSetWithObject:firstLike];
+            location.goodFor = os;
+
+        }
+        if ([APP_MOC save:nil]) {
+            [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"LocationsTableViewControllerAlreadyLoadedSampleLocations"];
         }
     }
     NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[Location entityName]];

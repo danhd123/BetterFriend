@@ -31,6 +31,12 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriends:)];
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] registerForPushNotifications];
     self.friends = [NSArray array];
+    NSFetchRequest *allFriends = [[NSFetchRequest alloc] initWithEntityName:[Friend entityName]];
+    NSArray *results = [APP_MOC executeFetchRequest:allFriends error:nil];
+    if ([results count])
+    {
+        self.friends = results;
+    }
     
 }
 
@@ -40,9 +46,12 @@
 }
 
 - (void)addFriends:(id)sender {
-    CNContactPickerViewController *cpvc = [CNContactPickerViewController new];
-    cpvc.delegate = self;
-    [self presentViewController:cpvc animated:YES completion:nil];
+    CNContactStore *contactStore = [CNContactStore new];
+    [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        CNContactPickerViewController *cpvc = [CNContactPickerViewController new];
+        cpvc.delegate = self;
+        [self presentViewController:cpvc animated:YES completion:nil];
+    }];
 }
 
 - (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray<CNContact *> *)contacts {
@@ -50,7 +59,7 @@
     for (CNContact *contact in contacts) {
         Friend *f = [Friend insertInManagedObjectContext:APP_MOC];
         f.contactsIdentifier = contact.identifier;
-        f.name = [contact.givenName stringByAppendingString:contact.familyName];
+        f.name = [NSString stringWithFormat:@"%@ %@", contact.givenName, contact.familyName];
         [tempFriends addObject:f];
     }
     self.friends = [self.friends arrayByAddingObjectsFromArray:tempFriends];

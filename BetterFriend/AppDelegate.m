@@ -28,8 +28,35 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
-    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"PushNotificationsOn" : @NO }];
+    if (![[NSUserDefaults standardUserDefaults] boolForKey:@"FirstRunDone"]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"FirstRunDone"];
+    }
+    else {
+        [self promptForInfo];
+    }
     return YES;
+}
+
+- (void)promptForInfo {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Question"
+                                                                   message:@"Does Sebastian like coffee?"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              // Add Coffee to Sebastian's likes.
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"No" style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction * action) {
+                                                       // Add Coffee to Sebastian's dislikes.
+                                                   }];
+    [alert addAction:cancel];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self.window.rootViewController presentViewController:alert animated:YES completion:nil];
+    });
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -49,6 +76,7 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     [FBSDKAppEvents activateApp];
+    
 
 }
 

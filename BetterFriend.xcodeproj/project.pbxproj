@@ -56,6 +56,9 @@
 		BC9A23BA1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
 		BC9A23BB1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
 		BC9A23BC1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
+		BC9A23D71D4538B10038C7BC /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23D61D4538B10038C7BC /* Events.json */; };
+		BC9A23D81D4538B10038C7BC /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23D61D4538B10038C7BC /* Events.json */; };
+		BC9A23D91D4538B10038C7BC /* Events.json in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23D61D4538B10038C7BC /* Events.json */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -170,6 +173,7 @@
 		BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSetupViewController.m; sourceTree = "<group>"; };
 		BC9A23B51D450DFB0038C7BC /* Sample Email.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sample Email.txt"; sourceTree = SOURCE_ROOT; };
 		BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sample Text Message.txt"; sourceTree = SOURCE_ROOT; };
+		BC9A23D61D4538B10038C7BC /* Events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Events.json; sourceTree = SOURCE_ROOT; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -311,6 +315,7 @@
 				BC9A22A41D43E7FE0038C7BC /* Info.plist */,
 				D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */,
 				BC9A22D31D4409250038C7BC /* locations.json */,
+				BC9A23D61D4538B10038C7BC /* Events.json */,
 				BC9A23B51D450DFB0038C7BC /* Sample Email.txt */,
 				BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */,
 				BC9A22901D43E7FE0038C7BC /* Supporting Files */,
@@ -604,6 +609,7 @@
 				TargetAttributes = {
 					BC9A228C1D43E7FE0038C7BC = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = W996AE7S2U;
 					};
 					BC9A22A81D43E7FE0038C7BC = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -647,6 +653,7 @@
 				D9A3B19D1D43ED8C002E6E09 /* upload-sym in Resources */,
 				D9A3B1AA1D43ED8C002E6E09 /* GINInviteResources.bundle in Resources */,
 				BC9A22A31D43E7FE0038C7BC /* LaunchScreen.storyboard in Resources */,
+				BC9A23D71D4538B10038C7BC /* Events.json in Resources */,
 				D9A3B19F1D43ED8C002E6E09 /* upload-sym.sh in Resources */,
 				D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */,
 				D9A3B1AB1D43ED8C002E6E09 /* GPPACLPickerResources.bundle in Resources */,
@@ -664,6 +671,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9A23B81D450DFB0038C7BC /* Sample Email.txt in Resources */,
+				BC9A23D81D4538B10038C7BC /* Events.json in Resources */,
 				BC9A23BB1D450DFB0038C7BC /* Sample Text Message.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -673,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9A23B91D450DFB0038C7BC /* Sample Email.txt in Resources */,
+				BC9A23D91D4538B10038C7BC /* Events.json in Resources */,
 				BC9A23BC1D450DFB0038C7BC /* Sample Text Message.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -858,6 +867,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Database",
@@ -878,6 +889,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -885,6 +897,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/BetterFriend/Firebase/Database",
@@ -905,6 +919,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.betterfriend.BetterFriend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

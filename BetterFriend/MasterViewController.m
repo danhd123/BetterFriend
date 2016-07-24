@@ -10,14 +10,17 @@
 #import "DetailViewController.h"
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "AppDelegate.h"
-#import "Friend.h"
-#import "Location.h"
+#import "Friend+CoreDataProperties.h"
+#import "Location+CoreDataProperties.h"
 #import <Contacts/Contacts.h>
-#import "Like.h"
+#import "Like+CoreDataProperties.h"
 
 @interface MasterViewController ()
 
 @property NSMutableArray *objects;
+@property MFMailComposeViewController *composeVC;
+@property MFMessageComposeViewController *messageVC;
+@property BOOL shouldCheckForStaleFriends;
 @end
 
 @implementation MasterViewController
@@ -33,7 +36,13 @@
 //    loginButton.center = self.view.center;
 //    [self.view addSubview:loginButton];
     
-    //get contacts
+    //get events
+    NSData *eventsData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"Events" withExtension:@"json"]];
+    NSArray *events = [NSJSONSerialization JSONObjectWithData:eventsData options:0 error:nil];
+    if (self.objects == nil) {
+        self.objects = [NSMutableArray array];
+    }
+    [self.objects addObjectsFromArray:events];
     
 }
 
@@ -43,12 +52,18 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
     [self checkForStaleFriends];
 }
 
 - (void)checkForStaleFriends {
+    if (!self.shouldCheckForStaleFriends)
+    {
+        return;
+    }
     NSFetchRequest *friendRequest = [[NSFetchRequest alloc] initWithEntityName:[Friend entityName]];
     NSArray<Friend *> *friends = [APP_MOC executeFetchRequest:friendRequest error:nil];
+    __block BOOL reached = NO;
     for (Friend *f in friends) {
         if (f.isStale) {
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Hang out with %@?", f.name]
@@ -57,7 +72,14 @@
             
             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out!" style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {
-                                                                      [self attemptMailSendWithFriend:f date:nil location:nil];
+                                                                      reached = YES;
+                                                                        if (reached == YES)
+                                                                        {
+                                                                            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                                                [self attemptMailSendWithFriend:f date:nil location:nil];
+                                                                            });
+                                                                        }
+
                                                                   }];
             
             [alert addAction:defaultAction];
@@ -66,7 +88,7 @@
                                                                //set timer for 5 minutes before reminding user to reach out again
                                                             }];
             [alert addAction:cancel];
-            [self presentViewController:alert animated:YES completion:nil];
+            [self presentViewController:alert animated:YES completion:^{}];
 
         }
     }
@@ -78,36 +100,49 @@
         return;
     }
     
-    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
-    composeVC.mailComposeDelegate = self;
+    self.composeVC = [[MFMailComposeViewController alloc] init];
+    self.composeVC.mailComposeDelegate = self;
     
     // Configure the fields of the interface.
-    Location *demolocation = [Location new];
-    demolocation.name = @"Sightglass";
-    Like *demolike = [Like new];
-    demolike.name = @"coffee";
-    NSOrderedSet *os = [NSOrderedSet orderedSetWithObject:demolike];
-    demolocation.goodFor = os;
+    NSFetchRequest *locationReq = [[NSFetchRequest alloc] initWithEntityName:[Location entityName]];
+    locationReq.predicate = [NSComparisonPredicate predicateWithLeftExpression:[NSExpression expressionForKeyPath:@"name"] rightExpression:[NSExpression expressionForConstantValue:@"Trouble Cafe"] modifier:NSDirectPredicateModifier type:NSEqualToPredicateOperatorType options:NSDiacriticInsensitivePredicateOption];
+    NSArray *results = [APP_MOC executeFetchRequest:locationReq error:nil];
+    Location *demolocation = results[0];
     location = demolocation;
-    
     NSArray *keysToFetch = @[CNContactEmailAddressesKey, CNContactNicknameKey, CNContactGivenNameKey, CNContactFamilyNameKey];
     CNContactStore *contactStore = [CNContactStore new];
     CNContact *contact = [contactStore unifiedContactWithIdentifier:f.contactsIdentifier keysToFetch:keysToFetch error:nil];
-    [composeVC setToRecipients:@[contact.emailAddresses]];
-    [composeVC setSubject:[NSString stringWithFormat:@"%@ sometime soon?", location.goodFor.firstObject.name]];
-    [composeVC setMessageBody:[NSString stringWithFormat:@"Hi %@,\n\nI hope you're doing well. I've been enjoying the weather out here in San Francisco.\n\nJust wanted to drop a line and see if you were free to catch up. Are you free to grab %@ 8/3 at 4 PM?\n\nI look forward to talking to you soon.\n\nCheers,\n%@", contact.nickname ?: contact.givenName ?: contact.familyName, location.goodFor.firstObject.name/*, date TODO: format better */, @"Daniel"]
+    NSString *recipEmail = contact.emailAddresses[0].value;
+    [self.composeVC setToRecipients:@[recipEmail]];
+    NSOrderedSet *gf = location.goodFor;
+    Like *first = gf[0];
+    NSString *subsubj = first.name;
+    NSString *subj = [NSString stringWithFormat:@"%@ sometime soon?", subsubj];
+    [self.composeVC setSubject:subj ];
+//    [self.composeVC setMessageBody:@"Foobar" isHTML:NO];
+    [self.composeVC setMessageBody:[NSString stringWithFormat:@"Hi %@,\n\nI hope you're doing well. I've been enjoying the weather out here in San Francisco.\n\nJust wanted to drop a line and see if you were free to catch up. Are you free to grab %@ 8/3 at 4 PM?\n\nI look forward to talking to you soon.\n\nCheers,\n%@", contact.givenName ?: contact.familyName, subsubj/*, date TODO: format better */, @"Daniel"]
                        isHTML:NO];
     
     // Present the view controller modally.
-    [self presentViewController:composeVC animated:YES completion:nil];
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self presentViewController:self.composeVC animated:YES completion:nil];
+//    });
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
-    if (result == MFMailComposeResultSent || MFMailComposeResultSaved) {
-        //success
-        //TODO record this in the DB. We'll need the Friend and Location to create a Correspondence.
-    }
-    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(demo_remindAboutNearStaleFriend:) userInfo:nil repeats:NO];
+//    if (result == MFMailComposeResultSent || result == MFMailComposeResultSaved) {
+//        //success
+//        //TODO record this in the DB. We'll need the Friend and Location to create a Correspondence.
+//    }
+//    else {
+//        [self dismissViewControllerAnimated:YES completion:^{
+//        }];
+//    }
+    self.shouldCheckForStaleFriends = NO;
+    [controller dismissViewControllerAnimated:YES completion:^{
+        
+        [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(demo_remindAboutNearStaleFriend:) userInfo:nil repeats:NO];
+    }];
 }
 
 - (void)demo_remindAboutNearStaleFriend:(NSTimer *)firedTimer {
@@ -117,7 +152,9 @@
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out!" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              [self attemptTextSendWithFriend:nil date:nil location:nil];
+                                                              dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                                                                  [self attemptTextSendWithFriend:nil date:nil location:nil];
+                                                              });
                                                           }];
     
     [alert addAction:defaultAction];
@@ -126,6 +163,9 @@
                                                        //set timer for 5 minutes before reminding user to reach out again
                                                    }];
     [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:^{
+        ;
+    }];
 }
 
 - (void)attemptTextSendWithFriend:(Friend *)f date:(NSDate *)date location:(Location *)location {
@@ -133,13 +173,30 @@
         NSLog(@"Something has gone wrong here");
         return;
     }
-    MFMessageComposeViewController *composeVC = [[MFMessageComposeViewController alloc] init];
-    composeVC.messageComposeDelegate = self;
+    self.messageVC = [[MFMessageComposeViewController alloc] init];
+    self.messageVC.messageComposeDelegate = self;
     if (f == nil) { //because we're doing a demo, say
-        NSArray *keysToFetch = @[CNContactPhoneNumbersKey, CNContactNicknameKey, CNContactGivenNameKey, CNContactFamilyNameKey];
         //todo: finish this
+        self.messageVC = [[MFMessageComposeViewController alloc] init];
+        NSArray *keysToFetch = @[CNContactPhoneNumbersKey, CNContactNicknameKey, CNContactGivenNameKey, CNContactFamilyNameKey];
+        CNContactStore *contactStore = [CNContactStore new];
+        CNContact *contact = [contactStore unifiedContactsMatchingPredicate:[CNContact predicateForContactsMatchingName:@"Sebastian Park"] keysToFetch:keysToFetch error:nil][0];
+        NSString *recipPhone = contact.phoneNumbers[0].value.stringValue;
+        [self.messageVC setRecipients:@[recipPhone]];
+        [self.messageVC setBody:@"Hey Sebastian! It's been too long since we last caught up. Want to hang out somewhere next Wednesday (8/4)? Say 4PM? LMK!"];
+        [self presentViewController:self.messageVC animated:YES completion:^{
+            ;
+        }];
     }
     
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult)result
+{
+    self.shouldCheckForStaleFriends = NO;
+    [self.messageVC dismissViewControllerAnimated:YES completion:^{
+        ;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -172,6 +229,7 @@
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
+    self.shouldCheckForStaleFriends = YES;
 }
 
 #pragma mark - Table View
@@ -187,8 +245,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    NSDictionary *object = self.objects[indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ with %@", object[@"Action"], object[@"Person"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", object[@"Date"], object[@"Time"]];
     return cell;
 }
 
@@ -204,6 +263,10 @@
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Upcoming Meetups";
 }
 
 @end
