@@ -12,6 +12,7 @@
 
 @interface FriendSetupViewController : UIViewController
 @property (strong, nonatomic) Friend *setupFriend;
+@property (weak, nonatomic) UIViewController *callingViewController;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *contactMethodControl;
 @property (weak, nonatomic) IBOutlet UILabel *whenLabel;

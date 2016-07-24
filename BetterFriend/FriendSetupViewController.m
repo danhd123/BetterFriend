@@ -21,7 +21,6 @@ static double sDefaultContactFrequency = 3.0 * 7.0 * 24.0 * 60.0 * 60.0;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(doneEditing:)];
     self.titleLabel.text = [NSString stringWithFormat:@"Be a better friend to %@.", self.setupFriend.name];
     self.whenLabel.text = [NSString stringWithFormat:@"When did you last see %@?", self.setupFriend.name];
     
@@ -32,16 +31,14 @@ static double sDefaultContactFrequency = 3.0 * 7.0 * 24.0 * 60.0 * 60.0;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)doneEditing:(id)sender {
+- (void)viewWillDisappear:(BOOL)animated {
     self.setupFriend.lastContacted = self.datePicker.date.timeIntervalSinceNow;
     self.setupFriend.contactFrequency = sDefaultContactFrequency;
     self.setupFriend.contactTypePreference = self.contactMethodControl.selectedSegmentIndex;
     [APP_MOC save:nil];
-    [self dismissViewControllerAnimated:YES completion:^{
-        dispatch_async(dispatch_get_main_queue(), ^{ //maybe possibly avoid an unlikely stack overflow
-            [(ManageTableViewController *)self.presentingViewController setupNextNewFriend];
-        });
-    }];
+    dispatch_async(dispatch_get_main_queue(), ^{ //maybe possibly avoid an unlikely stack overflow
+        [(ManageTableViewController *)self.callingViewController setupNextNewFriend];
+    });
 }
 
 /*

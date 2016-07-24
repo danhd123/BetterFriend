@@ -27,4 +27,8 @@
     return [NSEntityDescription entityForName:@"Friend" inManagedObjectContext:moc_];
 }
 
+- (BOOL)isStale {
+    return self.contactFrequency + self.lastContacted < [NSDate date].timeIntervalSinceReferenceDate;
+}
+
 @end

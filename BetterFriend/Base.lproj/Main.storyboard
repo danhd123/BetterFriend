@@ -199,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-xq-uE7">
-                                <rect key="frame" x="152.5" y="139" width="295" height="29"/>
+                                <rect key="frame" x="152" y="139" width="295" height="29"/>
                                 <segments>
                                     <segment title="Text"/>
                                     <segment title="Email"/>
@@ -219,8 +219,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4BJ-vK-GQM">
-                                <rect key="frame" x="0.0" y="204" width="600" height="216"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4BJ-vK-GQM">
+                                <rect key="frame" x="140" y="384" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="491044932.38546401">
                                     <!--2016-07-24 09:22:12 +0000-->
                                 </date>
@@ -229,8 +229,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c7Q-BI-v7F" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="1dX-MO-dIZ"/>
+                            <constraint firstItem="uh5-90-LPM" firstAttribute="top" secondItem="4BJ-vK-GQM" secondAttribute="bottom" id="HEd-oa-Qrx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="WK5-x6-rde" secondAttribute="leading" id="Jej-AL-dZF"/>
                             <constraint firstItem="OSw-xq-uE7" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="TGP-7W-44A"/>
+                            <constraint firstItem="4BJ-vK-GQM" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="VWb-8S-lsM"/>
                             <constraint firstItem="c7Q-BI-v7F" firstAttribute="top" secondItem="5aF-8Z-ZNS" secondAttribute="bottom" constant="8" id="eXS-0B-2yQ"/>
                             <constraint firstItem="WK5-x6-rde" firstAttribute="top" secondItem="c7Q-BI-v7F" secondAttribute="bottom" constant="17" id="jpf-1u-2OR"/>
                             <constraint firstItem="OSw-xq-uE7" firstAttribute="top" secondItem="WK5-x6-rde" secondAttribute="bottom" constant="8" id="qH1-6a-fAb"/>

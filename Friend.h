@@ -25,6 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (instancetype)insertInManagedObjectContext:(NSManagedObjectContext *)moc_;
 + (NSString*)entityName;
 + (nullable NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_;
+- (BOOL)isStale;
 
 @end
 

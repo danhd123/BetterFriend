@@ -30,6 +30,7 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriends:)];
     [(AppDelegate *)[[UIApplication sharedApplication] delegate] registerForPushNotifications];
+    self.friends = [NSArray array];
     
 }
 
@@ -52,15 +53,15 @@
         f.name = [contact.givenName stringByAppendingString:contact.familyName];
         [tempFriends addObject:f];
     }
-    self.friends = tempFriends;
+    self.friends = [self.friends arrayByAddingObjectsFromArray:tempFriends];
     [self.tableView reloadData];
     [self setupNextNewFriend];
 }
 
 - (void)setupNextNewFriend {
-    for (Friend *friend in self.friends) {
-        if (friend.contactFrequency == 0.0) {
-            [self performSegueWithIdentifier:@"setupNewFriend" sender:friend];
+    for (Friend *f in self.friends) {
+        if (f.contactFrequency == 0.0) {
+            [self performSegueWithIdentifier:@"setupNewFriend" sender:f];
             return;
             //YUCK!!!!!!!!!!!!!!
         }
@@ -140,6 +141,7 @@
     if ([segue.identifier isEqualToString:@"setupNewFriend"]) {
         FriendSetupViewController *setupController = [segue destinationViewController];
         setupController.setupFriend = sender;
+        setupController.callingViewController = self;
     }
 }
 
