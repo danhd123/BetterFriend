@@ -55,7 +55,7 @@
                                                                            message:[NSString stringWithFormat:@"Do you want to reach out to %@ to hang out on 8/3 at 4 PM?", f.name]
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             
-            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out" style:UIAlertActionStyleDefault
+            UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out!" style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {
                                                                       [self attemptMailSendWithFriend:f date:nil location:nil];
                                                                   }];
@@ -100,7 +100,46 @@
     
     // Present the view controller modally.
     [self presentViewController:composeVC animated:YES completion:nil];
+}
 
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    if (result == MFMailComposeResultSent || MFMailComposeResultSaved) {
+        //success
+        //TODO record this in the DB. We'll need the Friend and Location to create a Correspondence.
+    }
+    [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(demo_remindAboutNearStaleFriend:) userInfo:nil repeats:NO];
+}
+
+- (void)demo_remindAboutNearStaleFriend:(NSTimer *)firedTimer {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Hang out with Sebastian?"]
+                                                                   message:[NSString stringWithFormat:@"Do you want to reach out to Sebastian to hang out on 8/4 at 4 PM?"]
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out!" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
+                                                              [self attemptTextSendWithFriend:nil date:nil location:nil];
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"Remind me soon!" style:UIAlertActionStyleCancel
+                                                   handler:^(UIAlertAction * action) {
+                                                       //set timer for 5 minutes before reminding user to reach out again
+                                                   }];
+    [alert addAction:cancel];
+}
+
+- (void)attemptTextSendWithFriend:(Friend *)f date:(NSDate *)date location:(Location *)location {
+    if (![MFMessageComposeViewController canSendText]) {
+        NSLog(@"Something has gone wrong here");
+        return;
+    }
+    MFMessageComposeViewController *composeVC = [[MFMessageComposeViewController alloc] init];
+    composeVC.messageComposeDelegate = self;
+    if (f == nil) { //because we're doing a demo, say
+        NSArray *keysToFetch = @[CNContactPhoneNumbersKey, CNContactNicknameKey, CNContactGivenNameKey, CNContactFamilyNameKey];
+        //todo: finish this
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
