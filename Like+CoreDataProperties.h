@@ -16,8 +16,22 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Like (CoreDataProperties)
 
 @property (nullable, nonatomic, retain) NSString *name;
-@property (nullable, nonatomic, retain) Location *foundAt;
-@property (nullable, nonatomic, retain) Friend *likedBy;
+@property (nullable, nonatomic, retain) NSSet<Location *> *foundAt;
+@property (nullable, nonatomic, retain) NSSet<Friend *> *likedBy;
+
+@end
+
+@interface Like (CoreDataGeneratedAccessors)
+
+- (void)addFoundAtObject:(Location *)value;
+- (void)removeFoundAtObject:(Location *)value;
+- (void)addFoundAt:(NSSet<Location *> *)values;
+- (void)removeFoundAt:(NSSet<Location *> *)values;
+
+- (void)addLikedByObject:(Friend *)value;
+- (void)removeLikedByObject:(Friend *)value;
+- (void)addLikedBy:(NSSet<Friend *> *)values;
+- (void)removeLikedBy:(NSSet<Friend *> *)values;
 
 @end
 

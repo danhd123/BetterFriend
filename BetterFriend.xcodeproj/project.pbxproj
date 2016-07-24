@@ -50,6 +50,12 @@
 		BC9A23A01D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
 		BC9A23A11D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
 		BC9A23A21D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
+		BC9A23B71D450DFB0038C7BC /* Sample Email.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B51D450DFB0038C7BC /* Sample Email.txt */; };
+		BC9A23B81D450DFB0038C7BC /* Sample Email.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B51D450DFB0038C7BC /* Sample Email.txt */; };
+		BC9A23B91D450DFB0038C7BC /* Sample Email.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B51D450DFB0038C7BC /* Sample Email.txt */; };
+		BC9A23BA1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
+		BC9A23BB1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
+		BC9A23BC1D450DFB0038C7BC /* Sample Text Message.txt in Resources */ = {isa = PBXBuildFile; fileRef = BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -162,6 +168,8 @@
 		BC9A23841D44AD9F0038C7BC /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = ../Correspondence.m; sourceTree = "<group>"; };
 		BC9A239E1D44C0A30038C7BC /* FriendSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendSetupViewController.h; sourceTree = "<group>"; };
 		BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSetupViewController.m; sourceTree = "<group>"; };
+		BC9A23B51D450DFB0038C7BC /* Sample Email.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sample Email.txt"; sourceTree = SOURCE_ROOT; };
+		BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Sample Text Message.txt"; sourceTree = SOURCE_ROOT; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -303,6 +311,8 @@
 				BC9A22A41D43E7FE0038C7BC /* Info.plist */,
 				D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */,
 				BC9A22D31D4409250038C7BC /* locations.json */,
+				BC9A23B51D450DFB0038C7BC /* Sample Email.txt */,
+				BC9A23B61D450DFB0038C7BC /* Sample Text Message.txt */,
 				BC9A22901D43E7FE0038C7BC /* Supporting Files */,
 				BC9A22D81D440BC60038C7BC /* ManageTableViewController.h */,
 				BC9A22D91D440BC60038C7BC /* ManageTableViewController.m */,
@@ -631,6 +641,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC9A22D41D4409250038C7BC /* locations.json in Resources */,
+				BC9A23BA1D450DFB0038C7BC /* Sample Text Message.txt in Resources */,
+				BC9A23B71D450DFB0038C7BC /* Sample Email.txt in Resources */,
 				D9A3B1AC1D43ED8C002E6E09 /* GTMOAuth2ViewTouch.xib in Resources */,
 				D9A3B19D1D43ED8C002E6E09 /* upload-sym in Resources */,
 				D9A3B1AA1D43ED8C002E6E09 /* GINInviteResources.bundle in Resources */,
@@ -651,6 +663,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9A23B81D450DFB0038C7BC /* Sample Email.txt in Resources */,
+				BC9A23BB1D450DFB0038C7BC /* Sample Text Message.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +672,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9A23B91D450DFB0038C7BC /* Sample Email.txt in Resources */,
+				BC9A23BC1D450DFB0038C7BC /* Sample Text Message.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

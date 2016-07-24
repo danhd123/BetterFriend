@@ -22,6 +22,5 @@
 @dynamic correspondences;
 @dynamic goodFor;
 @dynamic badFor;
-@dynamic type;
 
 @end

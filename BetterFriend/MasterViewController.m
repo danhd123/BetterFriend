@@ -11,6 +11,9 @@
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "AppDelegate.h"
 #import "Friend.h"
+#import "Location.h"
+#import <Contacts/Contacts.h>
+#import "Like.h"
 
 @interface MasterViewController ()
 
@@ -49,12 +52,12 @@
     for (Friend *f in friends) {
         if (f.isStale) {
             UIAlertController* alert = [UIAlertController alertControllerWithTitle:[NSString stringWithFormat:@"Hang out with %@?", f.name]
-                                                                           message:[NSString stringWithFormat:@"Do you want to reach out to %@ to hang out on 7/27 at 4 PM?", f.name]
+                                                                           message:[NSString stringWithFormat:@"Do you want to reach out to %@ to hang out on 8/3 at 4 PM?", f.name]
                                                                     preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out" style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {
-                                                                      
+                                                                      [self attemptMailSendWithFriend:f date:nil location:nil];
                                                                   }];
             
             [alert addAction:defaultAction];
@@ -67,6 +70,37 @@
 
         }
     }
+}
+
+- (void)attemptMailSendWithFriend:(Friend *)f date:(NSDate *)date location:(Location *)location {
+    if (![MFMailComposeViewController canSendMail]) {
+        NSLog(@"something has gone terribly wrong");
+        return;
+    }
+    
+    MFMailComposeViewController* composeVC = [[MFMailComposeViewController alloc] init];
+    composeVC.mailComposeDelegate = self;
+    
+    // Configure the fields of the interface.
+    Location *demolocation = [Location new];
+    demolocation.name = @"Sightglass";
+    Like *demolike = [Like new];
+    demolike.name = @"coffee";
+    NSOrderedSet *os = [NSOrderedSet orderedSetWithObject:demolike];
+    demolocation.goodFor = os;
+    location = demolocation;
+    
+    NSArray *keysToFetch = @[CNContactEmailAddressesKey, CNContactNicknameKey, CNContactGivenNameKey, CNContactFamilyNameKey];
+    CNContactStore *contactStore = [CNContactStore new];
+    CNContact *contact = [contactStore unifiedContactWithIdentifier:f.contactsIdentifier keysToFetch:keysToFetch error:nil];
+    [composeVC setToRecipients:@[contact.emailAddresses]];
+    [composeVC setSubject:[NSString stringWithFormat:@"%@ sometime soon?", location.goodFor.firstObject.name]];
+    [composeVC setMessageBody:[NSString stringWithFormat:@"Hi %@,\n\nI hope you're doing well. I've been enjoying the weather out here in San Francisco.\n\nJust wanted to drop a line and see if you were free to catch up. Are you free to grab %@ 8/3 at 4 PM?\n\nI look forward to talking to you soon.\n\nCheers,\n%@", contact.nickname ?: contact.givenName ?: contact.familyName, location.goodFor.firstObject.name/*, date TODO: format better */, @"Daniel"]
+                       isHTML:NO];
+    
+    // Present the view controller modally.
+    [self presentViewController:composeVC animated:YES completion:nil];
+
 }
 
 - (void)didReceiveMemoryWarning {
