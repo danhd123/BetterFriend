@@ -11,6 +11,8 @@
 #import "Friend.h"
 #import "AppDelegate.h"
 
+#define APP_MOC ([(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext])
+
 @interface ManageTableViewController ()
 
 @property (strong, nonatomic) NSArray<Friend *> *friends;
@@ -43,7 +45,15 @@
 }
 
 - (void)contactPicker:(CNContactPickerViewController *)picker didSelectContacts:(NSArray<CNContact *> *)contacts {
-    [[FriendManager defaultFriendManager] addFriendsFromContacts:contacts];
+    NSMutableArray *tempFriends = [NSMutableArray arrayWithCapacity:contacts.count];
+    for (CNContact *contact in contacts) {
+        Friend *f = [Friend insertInManagedObjectContext:APP_MOC];
+        f.contactsIdentifier = contact.identifier;
+        f.name = [contact.givenName stringByAppendingString:contact.familyName];
+        [tempFriends addObject:f];
+    }
+    self.friends = tempFriends;
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source

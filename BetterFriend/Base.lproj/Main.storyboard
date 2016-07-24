@@ -171,10 +171,44 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Manage Friends" id="f3e-qd-BfI"/>
+                    <connections>
+                        <segue destination="dHW-ge-gVb" kind="show" identifier="showUserImportQuestionaire" id="gR9-RP-abh"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vd-ZJ-fqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1569" y="-642"/>
+        </scene>
+        <!--Friend Info-->
+        <scene sceneID="giE-ex-F39">
+            <objects>
+                <viewController id="dHW-ge-gVb" customClass="UserQuestionaireViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5aF-8Z-ZNS"/>
+                        <viewControllerLayoutGuide type="bottom" id="uh5-90-LPM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JUW-8p-bNu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Be a better friend to Bob" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7Q-BI-v7F">
+                                <rect key="frame" x="206" y="72" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c7Q-BI-v7F" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="1dX-MO-dIZ"/>
+                            <constraint firstItem="c7Q-BI-v7F" firstAttribute="top" secondItem="5aF-8Z-ZNS" secondAttribute="bottom" constant="8" id="eXS-0B-2yQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friend Info" id="ZiU-Va-mEn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Zt-qJ-296" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1566" y="137"/>
         </scene>
         <!--Manage Locations-->
         <scene sceneID="uoZ-vw-bki">

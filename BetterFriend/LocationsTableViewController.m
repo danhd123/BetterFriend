@@ -45,7 +45,7 @@
     for (NSDictionary *dict in locationArray) {
         Location *location = [Location new];
         location.name = dict[@"Thing"];
-        location.subdescription = dict[@"Description"];
+        location.detail = dict[@"Description"];
         location.type = [Location locationTypeFromString:dict[@"Type"]];
         switch (location.type) {
             case 0:

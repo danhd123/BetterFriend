@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G31" minimumToolsVersion="Xcode 7.0">
+    <entity name="Correspondence" representedClassName="Correspondence" syncable="YES">
+        <relationship name="friend" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="correspondences" inverseEntity="Friend" syncable="YES"/>
+        <relationship name="location" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="correspondences" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Dislike" representedClassName="Dislike" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dislikedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="dislikes" inverseEntity="Friend" syncable="YES"/>
+        <relationship name="foundAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="badFor" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <entity name="Friend" representedClassName="Friend" syncable="YES">
+        <attribute name="contactFrequency" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="contactsIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastContacted" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="correspondences" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Correspondence" inverseName="friend" inverseEntity="Correspondence" syncable="YES"/>
+        <relationship name="dislikes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dislike" inverseName="dislikedBy" inverseEntity="Dislike" syncable="YES"/>
+        <relationship name="likes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Like" inverseName="likedBy" inverseEntity="Like" syncable="YES"/>
+    </entity>
+    <entity name="Like" representedClassName="Like" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="foundAt" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="goodFor" inverseEntity="Location" syncable="YES"/>
+        <relationship name="likedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Friend" inverseName="likes" inverseEntity="Friend" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="detail" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Integer 16" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="subtype" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="badFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Dislike" inverseName="foundAt" inverseEntity="Dislike" syncable="YES"/>
+        <relationship name="correspondences" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Correspondence" inverseName="location" inverseEntity="Correspondence" syncable="YES"/>
+        <relationship name="goodFor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Like" inverseName="foundAt" inverseEntity="Like" syncable="YES"/>
+        <relationship name="type" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocationType" inverseName="locations" inverseEntity="LocationType" syncable="YES"/>
+    </entity>
+    <entity name="LocationType" representedClassName="LocationType" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locations" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="type" inverseEntity="Location" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Friend" positionX="-297" positionY="-76" width="128" height="148"/>
+        <element name="Location" positionX="180" positionY="-169" width="128" height="178"/>
+        <element name="Like" positionX="-38" positionY="-9" width="128" height="88"/>
+        <element name="Dislike" positionX="-47" positionY="-124" width="128" height="88"/>
+        <element name="Correspondence" positionX="-65" positionY="-423" width="128" height="73"/>
+        <element name="LocationType" positionX="351" positionY="-192" width="128" height="73"/>
+    </elements>
+</model>
