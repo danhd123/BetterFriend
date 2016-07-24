@@ -1,0 +1,14 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="845" measuredH="579" mockupW="282" mockupH="573">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::iPhone" x="563" y="6" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::iPhoneMenu" x="597" y="114" w="-1" h="-1" measuredW="215" measuredH="155" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>BetterFriend%20Locations%0AFood%2C%20%28%3E%29%0AActivities%2C%20%28%3E%29%0ALocations%2C%20%28%3E%29%0AEvents%2C%20%28%3E%29</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

@@ -1,0 +1,37 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="1112" measuredH="583" mockupW="615" mockupH="583">
+  <controls>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::iPhone" x="497" y="10" w="-1" h="-1" measuredW="282" measuredH="573" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <model>IPhone5</model>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Canvas" x="524" y="107" w="228" h="393" measuredW="100" measuredH="70" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>13421772</color>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Alert" x="538" y="155" w="-1" h="-1" measuredW="212" measuredH="117" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>How%20was%20coffee%20w/%20Bob%3F%0ADid%20you%20like%20Sightglass%20Coffee%3F%0ANo%2C%20Yes</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::Canvas" x="909" y="24" w="188" h="219" measuredW="100" measuredH="70" zOrder="3" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::RadioButtonGroup" x="922" y="31" w="162" h="204" measuredW="159" measuredH="127" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>%28o%29%20Bob%20%22B-God%22%20Zowling%0A%20%20%20%20Last%20Seen%206/13/2016%0A%28-%29%20%20Bob%20is%20in%20San%20Francisco%0A-%28%20%29%20Bob%20accepts%20messages-%0A-%28o%29%20Bob%20doesn%27t%20drink%205-%0A-%28-%29%20Bob%20likes%20coffee%206-</text>
+      </controlProperties>
+    </control>
+    <control controlID="14" controlTypeID="com.balsamiq.mockups::Button" x="881" y="0" w="-1" h="-1" measuredW="231" measuredH="24" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>App%20learns%20over-time%20what%20you%20want</text>
+      </controlProperties>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Arrow" x="737" y="81" w="179" h="67" measuredW="150" measuredH="100" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <direction>bottom</direction>
+        <rightArrow>false</rightArrow>
+        <text/>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
