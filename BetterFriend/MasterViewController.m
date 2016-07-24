@@ -54,7 +54,7 @@
             
             UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"Reach out" style:UIAlertActionStyleDefault
                                                                   handler:^(UIAlertAction * action) {
-                                                                      //build email/SMS/call here
+                                                                      
                                                                   }];
             
             [alert addAction:defaultAction];
