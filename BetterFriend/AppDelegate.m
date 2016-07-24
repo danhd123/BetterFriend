@@ -27,6 +27,7 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"PushNotificationsOn" : @NO }];
     return YES;
 }
 
@@ -71,5 +72,26 @@
         return NO;
     }
 }
+
+#pragma mark - Push Notifications
+
+- (void)registerForPushNotifications {
+    UIUserNotificationSettings *settings =
+    [UIUserNotificationSettings
+     settingsForTypes: UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound
+     categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+}
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    //TODO: give the token to Firebase and start setting up push notifs.
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    //pretend this doesn't happen, this is a hackathon. 
+}
+
 
 @end

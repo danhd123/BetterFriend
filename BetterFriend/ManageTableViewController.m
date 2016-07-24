@@ -8,10 +8,12 @@
 
 #import "ManageTableViewController.h"
 #import "FriendManager.h"
+#import "Friend.h"
+#import "AppDelegate.h"
 
 @interface ManageTableViewController ()
 
-@property (strong, nonatomic) NSArray *friends;
+@property (strong, nonatomic) NSArray<Friend *> *friends;
 @end
 
 @implementation ManageTableViewController
@@ -25,6 +27,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(addFriends:)];
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] registerForPushNotifications];
     
 }
 
@@ -46,11 +49,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section < 3) {
+    if (section < 1) {
         return 1;
     }
     else return self.friends.count;
@@ -59,11 +62,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = nil;
-    if ([indexPath indexAtPosition:0] == 3) {
+    if ([indexPath indexAtPosition:0] == 1) {
         cell = [tableView dequeueReusableCellWithIdentifier:@"PersonCell" forIndexPath:indexPath];
-        cell.textLabel.text = self.friends[[indexPath indexAtPosition:1]];
+        cell.textLabel.text = [self.friends[[indexPath indexAtPosition:1]] name];
     }
-    
+    else if ([indexPath indexAtPosition:0] == 0) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"LocationsCell" forIndexPath:indexPath];
+        
+    }
     // Configure the cell...
     
     return cell;

@@ -1,5 +1,5 @@
 //
-//  ManageTableViewController.h
+//  LocationsTableViewController.h
 //  BetterFriend
 //
 //  Created by Daniel DeCovnick on 7/23/16.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <ContactsUI/ContactsUI.h>
 
-@interface ManageTableViewController : UITableViewController <CNContactPickerDelegate>
+@interface LocationsTableViewController : UITableViewController
+
 @end
