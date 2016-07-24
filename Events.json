@@ -1,0 +1,23 @@
+[
+  {
+    "Action": "Drinks",
+    "Person": "Sophia",
+    "Location": "Monks Kettle",
+    "Date": "7/25/2016",
+    "Time": "18:00"
+  },
+  {
+    "Action": "House of Air",
+    "Person": "Vikram",
+    "Location": "House of Air",
+    "Date": "7/29/2016",
+    "Time": "13:00"
+  },
+  {
+    "Action": "Lunch",
+    "Person": "Ian",
+    "Location": "2732 17th St., SF",
+    "Date": "8/1/2016",
+    "Time": "11:00"  
+  }
+]
