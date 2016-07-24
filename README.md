@@ -20,8 +20,10 @@ Helping you keep in touch with your ~~pesky~~ valued friends since July 24th, 20
 
 `BetterFriend` provides:
 - Tracking of what type of friend your friends are to you
-- Progress/Movements of your friends as life goes on
 - Recommendations for when/where to meet up to catch up
 - Reminders of when it's been too long since you've last talked
 
 ## License
+
+BetterFriends is covered anad released under the
+[MIT License](https://github.com/JacobEvelyn/friends/blob/master/LICENSE.txt).
