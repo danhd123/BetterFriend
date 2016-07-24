@@ -10,7 +10,6 @@
 #import "Correspondence.h"
 #import "Dislike.h"
 #import "Like.h"
-#import "LocationType.h"
 
 @implementation Location
 

@@ -10,12 +10,12 @@
 #import "FriendManager.h"
 #import "Friend.h"
 #import "AppDelegate.h"
-
-#define APP_MOC ([(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext])
+#import "FriendSetupViewController.h"
 
 @interface ManageTableViewController ()
 
 @property (strong, nonatomic) NSArray<Friend *> *friends;
+//@property (strong, nonatomic) NSOperationQueue *
 @end
 
 @implementation ManageTableViewController
@@ -54,6 +54,17 @@
     }
     self.friends = tempFriends;
     [self.tableView reloadData];
+    [self setupNextNewFriend];
+}
+
+- (void)setupNextNewFriend {
+    for (Friend *friend in self.friends) {
+        if (friend.contactFrequency == 0.0) {
+            [self performSegueWithIdentifier:@"setupNewFriend" sender:friend];
+            return;
+            //YUCK!!!!!!!!!!!!!!
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -119,14 +130,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"setupNewFriend"]) {
+        FriendSetupViewController *setupController = [segue destinationViewController];
+        setupController.setupFriend = sender;
+    }
 }
-*/
+
 
 @end

@@ -8,6 +8,7 @@
 
 #import "LocationsTableViewController.h"
 #import "Location.h"
+#import "AppDelegate.h"
 
 @interface LocationsTableViewController ()
 @property (nonatomic, strong) NSMutableArray<Location *> *activities;
@@ -34,34 +35,37 @@
     self.food = [[NSMutableArray alloc] init];
     self.locations = [[NSMutableArray alloc] init];
     self.events = [[NSMutableArray alloc] init];
-    NSData *locationData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"locations" withExtension:@"json"]];
-    NSError *jsonConversionError = nil;
-    NSArray *locationArray = [NSJSONSerialization JSONObjectWithData:locationData options:0 error:&jsonConversionError];
-    if (!locationArray) {
-        NSLog(@"failed to convert JSON to array: %@", jsonConversionError);
-        return;
+    BOOL done = ![[NSUserDefaults standardUserDefaults] boolForKey:@"LocationsTableViewControllerAlreadyLoadedSampleLocations"];
+    if (!done) {
+        NSData *locationData = [NSData dataWithContentsOfURL:[[NSBundle mainBundle] URLForResource:@"locations" withExtension:@"json"]];
+        NSError *jsonConversionError = nil;
+        NSArray *locationArray = [NSJSONSerialization JSONObjectWithData:locationData options:0 error:&jsonConversionError];
+        if (!locationArray) {
+            NSLog(@"failed to convert JSON to array: %@", jsonConversionError);
+            return;
+        }
+        //TODO: maybe do this in a LocationsManager that connects to Firebase.
+        for (NSDictionary *dict in locationArray) {
+            Location *location = [Location insertInManagedObjectContext:APP_MOC];
+            location.name = dict[@"Thing"];
+            location.detail = dict[@"Description"];
+            location.locationType = dict[@"Type"];
+        }
     }
-    //TODO: maybe do this in a LocationsManager that connects to Firebase.
-    for (NSDictionary *dict in locationArray) {
-        Location *location = [Location new];
-        location.name = dict[@"Thing"];
-        location.detail = dict[@"Description"];
-        location.type = [Location locationTypeFromString:dict[@"Type"]];
-        switch (location.type) {
-            case 0:
-                [self.activities addObject:location];
-                break;
-            case 1:
-                [self.food addObject:location];
-                break;
-            case 2:
-                [self.locations addObject:location];
-                break;
-            case 3:
-                [self.events addObject:location];
-                break;
-            default:
-                break;
+    NSFetchRequest *req = [[NSFetchRequest alloc] initWithEntityName:[Location entityName]];
+    NSArray<Location *> *results = [APP_MOC executeFetchRequest:req error:nil];
+    for (Location *location in results) {
+        if ([location.locationType isEqualToString:@"Activity"]) {
+            [self.activities addObject:location];
+        }
+        else if ([location.locationType isEqualToString:@"Food"]) {
+            [self.food addObject:location];
+        }
+        else if ([location.locationType isEqualToString:@"Location"]) {
+            [self.locations addObject:location];
+        }
+        else if ([location.locationType isEqualToString:@"Event"]) {
+            [self.events addObject:location];
         }
     }
     self.allLocations = [NSArray arrayWithObjects:self.activities, self.food, self.locations, self.events, nil];
@@ -105,7 +109,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LocationCell" forIndexPath:indexPath];
     
     cell.textLabel.text = self.allLocations[[indexPath indexAtPosition:0]][[indexPath indexAtPosition:1]].name;
-    cell.detailTextLabel.text = self.allLocations[[indexPath indexAtPosition:0]][[indexPath indexAtPosition:1]].subdescription;
+    cell.detailTextLabel.text = self.allLocations[[indexPath indexAtPosition:0]][[indexPath indexAtPosition:1]].detail;
     return cell;
 }
 

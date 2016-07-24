@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -172,7 +173,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Manage Friends" id="f3e-qd-BfI"/>
                     <connections>
-                        <segue destination="dHW-ge-gVb" kind="show" identifier="showUserImportQuestionaire" id="gR9-RP-abh"/>
+                        <segue destination="dHW-ge-gVb" kind="show" identifier="setupNewFriend" id="gR9-RP-abh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Vd-ZJ-fqd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -182,7 +183,7 @@
         <!--Friend Info-->
         <scene sceneID="giE-ex-F39">
             <objects>
-                <viewController id="dHW-ge-gVb" customClass="UserQuestionaireViewController" sceneMemberID="viewController">
+                <viewController id="dHW-ge-gVb" customClass="FriendSetupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5aF-8Z-ZNS"/>
                         <viewControllerLayoutGuide type="bottom" id="uh5-90-LPM"/>
@@ -197,14 +198,53 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OSw-xq-uE7">
+                                <rect key="frame" x="152.5" y="139" width="295" height="29"/>
+                                <segments>
+                                    <segment title="Text"/>
+                                    <segment title="Email"/>
+                                    <segment title="Phone"/>
+                                    <segment title="In-Person"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preferred Contact Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK5-x6-rde">
+                                <rect key="frame" x="20" y="110" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did you last see Bob?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jsx-Ui-3q4">
+                                <rect key="frame" x="20" y="175" width="212" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="4BJ-vK-GQM">
+                                <rect key="frame" x="0.0" y="204" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="491044932.38546401">
+                                    <!--2016-07-24 09:22:12 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c7Q-BI-v7F" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="1dX-MO-dIZ"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="WK5-x6-rde" secondAttribute="leading" id="Jej-AL-dZF"/>
+                            <constraint firstItem="OSw-xq-uE7" firstAttribute="centerX" secondItem="JUW-8p-bNu" secondAttribute="centerX" id="TGP-7W-44A"/>
                             <constraint firstItem="c7Q-BI-v7F" firstAttribute="top" secondItem="5aF-8Z-ZNS" secondAttribute="bottom" constant="8" id="eXS-0B-2yQ"/>
+                            <constraint firstItem="WK5-x6-rde" firstAttribute="top" secondItem="c7Q-BI-v7F" secondAttribute="bottom" constant="17" id="jpf-1u-2OR"/>
+                            <constraint firstItem="OSw-xq-uE7" firstAttribute="top" secondItem="WK5-x6-rde" secondAttribute="bottom" constant="8" id="qH1-6a-fAb"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Jsx-Ui-3q4" secondAttribute="leading" id="rV4-3i-Nxj"/>
+                            <constraint firstItem="Jsx-Ui-3q4" firstAttribute="top" secondItem="OSw-xq-uE7" secondAttribute="bottom" constant="8" id="xya-uw-gs7"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Friend Info" id="ZiU-Va-mEn"/>
+                    <connections>
+                        <outlet property="contactMethodControl" destination="OSw-xq-uE7" id="JLO-oq-gZg"/>
+                        <outlet property="datePicker" destination="4BJ-vK-GQM" id="Cyf-UL-2BE"/>
+                        <outlet property="titleLabel" destination="c7Q-BI-v7F" id="dVW-bt-cMs"/>
+                        <outlet property="whenLabel" destination="Jsx-Ui-3q4" id="R6i-le-pV4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Zt-qJ-296" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

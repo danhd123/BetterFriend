@@ -10,4 +10,5 @@
 #import <ContactsUI/ContactsUI.h>
 
 @interface ManageTableViewController : UITableViewController <CNContactPickerDelegate>
+- (void)setupNextNewFriend;
 @end

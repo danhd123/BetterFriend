@@ -43,14 +43,13 @@
 		BC9A23921D44AD9F0038C7BC /* Like+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A237A1D44AD9E0038C7BC /* Like+CoreDataProperties.m */; };
 		BC9A23931D44AD9F0038C7BC /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A237C1D44AD9E0038C7BC /* Like.m */; };
 		BC9A23941D44AD9F0038C7BC /* Like.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A237C1D44AD9E0038C7BC /* Like.m */; };
-		BC9A23951D44AD9F0038C7BC /* LocationType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A237E1D44AD9E0038C7BC /* LocationType+CoreDataProperties.m */; };
-		BC9A23961D44AD9F0038C7BC /* LocationType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A237E1D44AD9E0038C7BC /* LocationType+CoreDataProperties.m */; };
-		BC9A23971D44AD9F0038C7BC /* LocationType.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23801D44AD9E0038C7BC /* LocationType.m */; };
-		BC9A23981D44AD9F0038C7BC /* LocationType.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23801D44AD9E0038C7BC /* LocationType.m */; };
 		BC9A23991D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23821D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m */; };
 		BC9A239A1D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23821D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m */; };
 		BC9A239B1D44AD9F0038C7BC /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23841D44AD9F0038C7BC /* Correspondence.m */; };
 		BC9A239C1D44AD9F0038C7BC /* Correspondence.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A23841D44AD9F0038C7BC /* Correspondence.m */; };
+		BC9A23A01D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
+		BC9A23A11D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
+		BC9A23A21D44C0A30038C7BC /* FriendSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */; };
 		D9A3B1511D43EB55002E6E09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */; };
 		D9A3B1901D43ED8C002E6E09 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */; };
 		D9A3B1911D43ED8C002E6E09 /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */; };
@@ -157,14 +156,12 @@
 		BC9A237A1D44AD9E0038C7BC /* Like+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Like+CoreDataProperties.m"; path = "../Like+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BC9A237B1D44AD9E0038C7BC /* Like.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Like.h; path = ../Like.h; sourceTree = "<group>"; };
 		BC9A237C1D44AD9E0038C7BC /* Like.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Like.m; path = ../Like.m; sourceTree = "<group>"; };
-		BC9A237D1D44AD9E0038C7BC /* LocationType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LocationType+CoreDataProperties.h"; path = "../LocationType+CoreDataProperties.h"; sourceTree = "<group>"; };
-		BC9A237E1D44AD9E0038C7BC /* LocationType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "LocationType+CoreDataProperties.m"; path = "../LocationType+CoreDataProperties.m"; sourceTree = "<group>"; };
-		BC9A237F1D44AD9E0038C7BC /* LocationType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationType.h; path = ../LocationType.h; sourceTree = "<group>"; };
-		BC9A23801D44AD9E0038C7BC /* LocationType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationType.m; path = ../LocationType.m; sourceTree = "<group>"; };
 		BC9A23811D44AD9F0038C7BC /* Correspondence+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Correspondence+CoreDataProperties.h"; path = "../Correspondence+CoreDataProperties.h"; sourceTree = "<group>"; };
 		BC9A23821D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Correspondence+CoreDataProperties.m"; path = "../Correspondence+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BC9A23831D44AD9F0038C7BC /* Correspondence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Correspondence.h; path = ../Correspondence.h; sourceTree = "<group>"; };
 		BC9A23841D44AD9F0038C7BC /* Correspondence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Correspondence.m; path = ../Correspondence.m; sourceTree = "<group>"; };
+		BC9A239E1D44C0A30038C7BC /* FriendSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendSetupViewController.h; sourceTree = "<group>"; };
+		BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendSetupViewController.m; sourceTree = "<group>"; };
 		D9A3B1501D43EB55002E6E09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D9A3B15E1D43ED8C002E6E09 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		D9A3B1601D43ED8C002E6E09 /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FirebaseAnalytics.framework; sourceTree = "<group>"; };
@@ -314,6 +311,8 @@
 				BC9A22DB1D446D1B0038C7BC /* LocationsTableViewController.h */,
 				BC9A22DC1D446D1B0038C7BC /* LocationsTableViewController.m */,
 				BC9A22E11D44A7030038C7BC /* BetterFriend.xcdatamodeld */,
+				BC9A239E1D44C0A30038C7BC /* FriendSetupViewController.h */,
+				BC9A239F1D44C0A30038C7BC /* FriendSetupViewController.m */,
 			);
 			path = BetterFriend;
 			sourceTree = "<group>";
@@ -377,10 +376,6 @@
 				BC9A237A1D44AD9E0038C7BC /* Like+CoreDataProperties.m */,
 				BC9A237B1D44AD9E0038C7BC /* Like.h */,
 				BC9A237C1D44AD9E0038C7BC /* Like.m */,
-				BC9A237D1D44AD9E0038C7BC /* LocationType+CoreDataProperties.h */,
-				BC9A237E1D44AD9E0038C7BC /* LocationType+CoreDataProperties.m */,
-				BC9A237F1D44AD9E0038C7BC /* LocationType.h */,
-				BC9A23801D44AD9E0038C7BC /* LocationType.m */,
 				BC9A23811D44AD9F0038C7BC /* Correspondence+CoreDataProperties.h */,
 				BC9A23821D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m */,
 				BC9A23831D44AD9F0038C7BC /* Correspondence.h */,
@@ -681,16 +676,15 @@
 				BC9A23911D44AD9F0038C7BC /* Like+CoreDataProperties.m in Sources */,
 				BC9A23891D44AD9F0038C7BC /* Dislike+CoreDataProperties.m in Sources */,
 				BC9A22DD1D446D1B0038C7BC /* LocationsTableViewController.m in Sources */,
-				BC9A23951D44AD9F0038C7BC /* LocationType+CoreDataProperties.m in Sources */,
 				BC9A238F1D44AD9F0038C7BC /* Friend.m in Sources */,
 				BC9A23871D44AD9F0038C7BC /* Location.m in Sources */,
 				BC9A23991D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m in Sources */,
 				BC9A22DA1D440BC60038C7BC /* ManageTableViewController.m in Sources */,
 				BC9A22E31D44A7030038C7BC /* BetterFriend.xcdatamodeld in Sources */,
+				BC9A23A01D44C0A30038C7BC /* FriendSetupViewController.m in Sources */,
 				BC9A239B1D44AD9F0038C7BC /* Correspondence.m in Sources */,
 				BC9A238B1D44AD9F0038C7BC /* Dislike.m in Sources */,
 				D9A3B1B01D43ED8C002E6E09 /* README.md in Sources */,
-				BC9A23971D44AD9F0038C7BC /* LocationType.m in Sources */,
 				D9A3B1BA1D441EE8002E6E09 /* FriendManager.m in Sources */,
 				BC9A22921D43E7FE0038C7BC /* main.m in Sources */,
 				BC9A229B1D43E7FE0038C7BC /* DetailViewController.m in Sources */,
@@ -703,14 +697,13 @@
 			files = (
 				BC9A238C1D44AD9F0038C7BC /* Dislike.m in Sources */,
 				BC9A23901D44AD9F0038C7BC /* Friend.m in Sources */,
-				BC9A23961D44AD9F0038C7BC /* LocationType+CoreDataProperties.m in Sources */,
 				BC9A23861D44AD9F0038C7BC /* Location+CoreDataProperties.m in Sources */,
 				BC9A239C1D44AD9F0038C7BC /* Correspondence.m in Sources */,
-				BC9A23981D44AD9F0038C7BC /* LocationType.m in Sources */,
 				BC9A23881D44AD9F0038C7BC /* Location.m in Sources */,
 				BC9A23921D44AD9F0038C7BC /* Like+CoreDataProperties.m in Sources */,
 				BC9A22AE1D43E7FE0038C7BC /* BetterFriendTests.m in Sources */,
 				BC9A238A1D44AD9F0038C7BC /* Dislike+CoreDataProperties.m in Sources */,
+				BC9A23A11D44C0A30038C7BC /* FriendSetupViewController.m in Sources */,
 				BC9A23941D44AD9F0038C7BC /* Like.m in Sources */,
 				BC9A238E1D44AD9F0038C7BC /* Friend+CoreDataProperties.m in Sources */,
 				BC9A239A1D44AD9F0038C7BC /* Correspondence+CoreDataProperties.m in Sources */,
@@ -721,6 +714,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC9A23A21D44C0A30038C7BC /* FriendSetupViewController.m in Sources */,
 				BC9A22B91D43E7FE0038C7BC /* BetterFriendUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@
 @dynamic price;
 @dynamic url;
 @dynamic detail;
+@dynamic locationType;
 @dynamic correspondences;
 @dynamic goodFor;
 @dynamic badFor;

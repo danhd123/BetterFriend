@@ -18,12 +18,12 @@
 }
 
 + (NSString*)entityName {
-    return @"Correspondence"";
+    return @"Correspondence";
 }
 
 + (NSEntityDescription*)entityInManagedObjectContext:(NSManagedObjectContext*)moc_ {
     NSParameterAssert(moc_);
-    return [NSEntityDescription entityForName:@"Correspondence"" inManagedObjectContext:moc_];
+    return [NSEntityDescription entityForName:@"Correspondence" inManagedObjectContext:moc_];
 }
 
 @end

@@ -11,6 +11,13 @@
 
 @class Correspondence, Dislike, Like;
 
+typedef NS_ENUM(NSUInteger, FriendContactBy) {
+    FriendContactByEmail,
+    FriendContactByText,
+    FriendContactByPhone,
+    FriendContactByMeeting,
+};
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface Friend : NSManagedObject

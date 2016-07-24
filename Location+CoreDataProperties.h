@@ -20,10 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) int16_t price;
 @property (nullable, nonatomic, retain) NSString *url;
 @property (nullable, nonatomic, retain) NSString *detail;
+@property (nullable, nonatomic, retain) NSString *locationType;
 @property (nullable, nonatomic, retain) Correspondence *correspondences;
 @property (nullable, nonatomic, retain) Like *goodFor;
 @property (nullable, nonatomic, retain) Dislike *badFor;
-@property (nullable, nonatomic, retain) LocationType *type;
+@property (nullable, nonatomic, retain) NSManagedObject *type;
 
 @end
 

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define APP_MOC ([(AppDelegate *)[[UIApplication sharedApplication] delegate] managedObjectContext])
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;

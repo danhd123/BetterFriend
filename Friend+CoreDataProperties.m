@@ -17,6 +17,7 @@
 @dynamic contactsIdentifier;
 @dynamic lastContacted;
 @dynamic contactFrequency;
+@dynamic contactTypePreference;
 @dynamic likes;
 @dynamic dislikes;
 @dynamic correspondences;
