@@ -26,4 +26,4 @@ Helping you keep in touch with your ~~pesky~~ valued friends since July 24th, 20
 ## License
 
 BetterFriends is covered anad released under the
-[MIT License](https://github.com/JacobEvelyn/friends/blob/master/LICENSE.txt).
+[MIT License](https://github.com/danhd123/BetterFriend/blob/master/LICENSE.txt).
