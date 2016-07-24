@@ -1,4 +1,4 @@
-(c) Daniel DeCovnick 2016
+Copyright (c) 2016 Daniel DeCovnick
 
 MIT License
 
